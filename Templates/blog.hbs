@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{post.title}}</title>
+</head>
+<body>
+<div class="container pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="{{post.imageUrl}}" alt="Post Image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col-12 bg-dark text-white text-center">
+                    <h1 class="pt-2 pb-3">{{post.title}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5">
+    <div class="container">
+        <form action="/blog/{{blog._id}}/comments" method="post">
+            <textarea name="comment" class="form-control rounded-0" placeholder="Leave a comment here" rows="4" id="comment"></textarea>
+            <div class="form-group pt-2">
+                <button class="btn rounded-0 btn-primary w-100">Comments</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
